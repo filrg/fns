@@ -90,6 +90,7 @@ int main()
     snprintf(filename, sizeof(filename), "/home/nghiatran/NERF/fns/bumbum/output_%d.png", i);
     save_png(filename, host_buffer, frame_width, frame_height);
     free(host_buffer);
+    // Print frame and render time
     printf("[FRAME %d] m_frame_ms=%.2f, m_render_ms=%.2f\n",
            i,
            testbed.m_frame_ms.ema_val(),
